@@ -7,13 +7,13 @@
 			<key>bg.png</key>
 			<dict>
 				<key>width</key>
-				<integer>800</integer>
+				<integer>1120</integer>
 				<key>height</key>
-				<integer>600</integer>
+				<integer>630</integer>
 				<key>originalWidth</key>
-				<integer>800</integer>
+				<integer>1120</integer>
 				<key>originalHeight</key>
-				<integer>600</integer>
+				<integer>630</integer>
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
@@ -34,7 +34,7 @@
 				<key>originalHeight</key>
 				<integer>42</integer>
 				<key>x</key>
-				<integer>802</integer>
+				<integer>1122</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
@@ -53,9 +53,9 @@
 				<key>originalHeight</key>
 				<integer>42</integer>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>1242</integer>
 				<key>y</key>
-				<integer>602</integer>
+				<integer>0</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -71,12 +71,12 @@
 			<key>realTextureFileName</key>
 			<string>StartScene0.png</string>
 			<key>size</key>
-			<string>{1024,1024}</string>
+			<string>{2048,1024}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>1024</integer>
+			<integer>2048</integer>
 			<key>height</key>
 			<integer>1024</integer>
 		</dict>

@@ -1,4 +1,6 @@
 #include "HelloWorldScene.h"
+#include "firstScene.h"
+#include "secondScene.h"
 #include "SimpleAudioEngine.h"
 
 USING_NS_CC;
@@ -70,6 +72,9 @@ bool HelloWorld::init()
 	//获取初始界面背景图片
 	ImageView* bgPic = (ImageView*)Helper::seekWidgetByName(bgUI, "bgPic");
 	bgPic->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
+
+	//添加背景音乐
+	//CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("startScene.mp3",true);
     
 	//获取开始游戏按钮
 	Button* startBtn = (Button*)Helper::seekWidgetByName(bgUI, "startBtn");
@@ -116,7 +121,9 @@ void HelloWorld::startBtnOnClick(Ref*, TouchEventType type)
 		case TouchEventType::TOUCH_EVENT_CANCELED:
 			break;
 		case TouchEventType::TOUCH_EVENT_ENDED:
-			log("1223");
+
+			CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+			Director::getInstance()->replaceScene(firstScene::createScene());
 			break;
 	}
 }
