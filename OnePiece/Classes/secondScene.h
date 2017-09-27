@@ -12,6 +12,7 @@ public:
 	static Scene* createScene();
 	virtual bool init();
 	CREATE_FUNC(secondScene);
+
 private:
 	Player* m_player;
 };

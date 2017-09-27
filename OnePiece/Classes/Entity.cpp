@@ -3,7 +3,7 @@
 Entity::Entity()
 {
 	m_sprite = NULL;
-	m_frame = 2;
+	m_frame = 1;
 }
 
 Entity::~Entity()
@@ -40,6 +40,7 @@ Point Entity::getTagPosition()
 
 void Entity::setFrame(int frame)
 {
+	log("frame is changing!!!, the input is %d", frame);
 	m_frame = frame;
 }
 

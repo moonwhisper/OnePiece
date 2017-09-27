@@ -16,6 +16,8 @@ public:
 	CREATE_FUNC(Player);
 	virtual bool init();
 
+	void playerUpdate(float dt);
+
 };
 
 

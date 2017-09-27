@@ -17,7 +17,7 @@ class WASD_Controller : public Controller
 public:
 	CREATE_FUNC(WASD_Controller);
 	virtual bool init();
-	virtual void update(float dt);
+	void myupdate(float dt);
 
 	/*设置移动速度*/
 	void setiSpeed(int iSpeed);

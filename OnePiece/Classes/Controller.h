@@ -12,7 +12,7 @@ class Controller : public Node
 public:
 	/*ÉèÖÃ¼àÌı¶ÔÏó*/
 	void setControllerListener(ControllerListener* controllerListener);
-protected:
+public:
 	ControllerListener* m_controllerListener;
 };
 

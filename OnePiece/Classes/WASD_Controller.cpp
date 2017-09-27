@@ -36,11 +36,12 @@ bool WASD_Controller::init()
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(key_press_listener, this);
 
 
-	this->scheduleUpdate();
+	//this->scheduleUpdate();
+	this->schedule(schedule_selector(WASD_Controller::myupdate), 0.2f);
 	return true;
 }
 
-void WASD_Controller::update(float dt)
+void WASD_Controller::myupdate(float dt)
 {
 	if (m_controllerListener == NULL)
 	{
@@ -93,20 +94,26 @@ void WASD_Controller::move(int direction)
 		pos = m_controllerListener->getTagPosition();
 		pos.x -= m_iSpeed;
 		m_controllerListener->setTagPosition(pos.x, pos.y);
+
+		log("11");
 		break;
 	case RIGHT_DIR:
 
 		frame_now = m_controllerListener->getFrame();
 
-		if (frame_now = 4)
+		log("frame:%d", m_controllerListener->getFrame());
+
+		if (4 == frame_now)
 		{
 			frame_now = 0;
 		}
 		m_controllerListener->setFrame(frame_now + 1);
 
+
 		pos = m_controllerListener->getTagPosition();
 		pos.x += m_iSpeed;
 		m_controllerListener->setTagPosition(pos.x, pos.y);
+
 		break;
 	default:
 		break;
