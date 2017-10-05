@@ -13,7 +13,7 @@ public:
 	virtual bool init();
 	CREATE_FUNC(firstScene);
 
-	char *FontToUTF8(const char* font);
+	//char *FontToUTF8(const char* font);
 	void myUpdate(float dt);
 
 };

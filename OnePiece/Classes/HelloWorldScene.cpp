@@ -74,7 +74,7 @@ bool HelloWorld::init()
 	bgPic->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
 
 	//添加背景音乐
-	//CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("startScene.mp3",true);
+	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("startScene.mp3",true);
     
 	//获取开始游戏按钮
 	Button* startBtn = (Button*)Helper::seekWidgetByName(bgUI, "startBtn");

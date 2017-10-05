@@ -1,5 +1,6 @@
 #include "firstScene.h"
 #include "secondScene.h"
+#include "words.h"
 
 
 Scene* firstScene::createScene()
@@ -29,8 +30,9 @@ bool firstScene::init()
 	firstScene_bg->setPosition(visibleSize.width / 2, visibleSize.height / 2);
 	this->addChild(firstScene_bg);
 
+	words myword;
 
-	Label* label = Label::create(firstScene::FontToUTF8("东海的清晨，某个商船上正进行着party..."), "Arial", 24);
+	Label* label = Label::create(myword.FontToUTF8("东海的清晨，某个商船上正进行着party..."), "Arial", 24);
 	label->setPosition(ccp(700, 450));
 	this->addChild(label);
 
@@ -45,7 +47,7 @@ bool firstScene::init()
 
 }
 
-char *firstScene::FontToUTF8(const char* font)
+/*char *firstScene::FontToUTF8(const char* font)
 {
 	int len = MultiByteToWideChar(CP_ACP, 0, font, -1, NULL, 0);
 	wchar_t *wstr = new wchar_t[len + 1];
@@ -58,7 +60,7 @@ char *firstScene::FontToUTF8(const char* font)
 	WideCharToMultiByte(CP_UTF8, 0, wstr, -1, str, len, NULL, NULL);
 	if (wstr)delete[] wstr;
 	return str;
-}
+}*/
 
 void firstScene::myUpdate(float dt)
 {

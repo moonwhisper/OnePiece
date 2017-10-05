@@ -91,17 +91,38 @@ void WASD_Controller::move(int direction)
 	switch(direction)
 	{
 	case LEFT_DIR:
+
+		frame_now = m_controllerListener->getFrame();
+
+		log("frame:%d", m_controllerListener->getFrame());
+
+		if (frame_now >= 1 && frame_now <= 4)
+		{
+			frame_now = 4;
+		}
+
+		if (8 == frame_now)
+		{
+			frame_now = 5;
+		}
+		m_controllerListener->setFrame(frame_now + 1);
+
 		pos = m_controllerListener->getTagPosition();
 		pos.x -= m_iSpeed;
 		m_controllerListener->setTagPosition(pos.x, pos.y);
 
-		log("11");
+		//log("11");
 		break;
 	case RIGHT_DIR:
 
 		frame_now = m_controllerListener->getFrame();
 
 		log("frame:%d", m_controllerListener->getFrame());
+
+		if (frame_now >= 5 && frame_now <= 8)
+		{
+			frame_now = 0;
+		}
 
 		if (4 == frame_now)
 		{

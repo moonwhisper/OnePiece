@@ -14,7 +14,7 @@ bool Player::init()
 {
 	//½«Í¼Æ¬¼ÓÔØµ½¾«ÁéÖ¡»º´æ³Ø
 	SpriteFrameCache* lufeiCache11 = SpriteFrameCache::getInstance();
-	lufeiCache11->addSpriteFramesWithFile("lufei-move.plist", "lufei-move.png");
+	lufeiCache11->addSpriteFramesWithFile("role.plist", "role.png");
 
 	this->bindSprite(Sprite::createWithSpriteFrameName(StringUtils::format("move-%d.png", this->m_frame)));
 
@@ -27,7 +27,7 @@ bool Player::init()
 
 void Player::playerUpdate(float dt)
 {
-	log("player update time reached----%f",dt);
+	//log("player update time reached----%f",dt);
 	
 	this->m_sprite->setVisible(false);
 
