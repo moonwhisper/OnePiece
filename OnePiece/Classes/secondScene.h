@@ -5,6 +5,7 @@
 #include "cocos2d.h"
 #include "Player.h"
 #include "words.h"
+#include "firstBattleScene.h"
 
 #define DIALOG_TIMES 10
 

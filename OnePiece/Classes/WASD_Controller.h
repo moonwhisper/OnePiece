@@ -10,6 +10,11 @@
 #define UP_DIR 3
 #define DOWN_DIR 4
 
+#define BATTLE_NONE 0
+#define BATTLE_PUNCHES 1
+
+#define NORMAL_JUMP 1
+
 using namespace cocos2d;
 
 class WASD_Controller : public Controller
@@ -22,9 +27,16 @@ public:
 	/*设置移动速度*/
 	void setiSpeed(int iSpeed);
 
+	/*记录按键状态*/
 	bool isKeyPressed(EventKeyboard::KeyCode keyCode);
 
+	/*执行move动作*/
 	void move(int direction);
+
+	/*执行战斗动作*/
+	void battle(int battle_serial);
+
+	void jumpControl(int jumpType);
 
 private:
 	int m_iSpeed;

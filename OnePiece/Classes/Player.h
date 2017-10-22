@@ -18,6 +18,10 @@ public:
 
 	void playerUpdate(float dt);
 
+	void delayforBattle(float dt);
+
+	void actJump(int jumpType);
+
 };
 
 

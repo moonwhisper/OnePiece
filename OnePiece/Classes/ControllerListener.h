@@ -20,6 +20,19 @@ public:
 	/*获取目标frame*/
 	virtual int getFrame() = 0;
 
+	/*设置battle类型标记*/
+	virtual void setBattle(int battleSerial) = 0;
+
+	/*获取battle类型标记*/
+	virtual int getBattle() = 0;
+
+	/*设置jump类型标记*/
+	virtual void setJump(int jumpType) = 0;
+
+	/*获取jump类型标记*/
+	virtual int getJump() = 0;
+
+
 };
 
 

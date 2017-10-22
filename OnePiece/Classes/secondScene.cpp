@@ -1,5 +1,6 @@
 #include "secondScene.h"
 #include "WASD_Controller.h"
+#include "globalVar.h"
 
 Scene* secondScene::createScene()
 {
@@ -240,6 +241,12 @@ void secondScene::seceneUpdate(float dt)
 			lufei_dialog->setVisible(false);
 
 			label->setString(myword.FontToUTF8("说谁是粗鲁的大婶呢？！！做好死的觉悟吧"));
+			break;
+		case 7:
+
+			Director::getInstance()->replaceScene(TransitionFade::create(0.3f, firstBattleScene::createScene()));
+
+
 			break;
 		default:
 			break;
