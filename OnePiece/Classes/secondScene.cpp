@@ -244,7 +244,20 @@ void secondScene::seceneUpdate(float dt)
 			break;
 		case 7:
 
-			Director::getInstance()->replaceScene(TransitionFade::create(0.3f, firstBattleScene::createScene()));
+			//reset for init state  which is nesseary when return to this scene
+			for (int k = 0; k < DIALOG_TIMES; k++)
+			{
+				dialog_flag[k] = false;
+			}
+			YaErLiTa_dialog->setVisible(false);
+			label->setVisible(false);
+			dialog_bg->setVisible(false);
+			second_scene_key_check[EventKeyboard::KeyCode::KEY_SPACE] = false;
+
+			//Director::getInstance()->replaceScene(TransitionFade::create(0.3f, firstBattleScene::createScene()));
+
+			//push stack for when return to this scene,the data will not be lost
+			Director::getInstance()->pushScene(TransitionFade::create(0.3f, firstBattleScene::createScene()));
 
 
 			break;

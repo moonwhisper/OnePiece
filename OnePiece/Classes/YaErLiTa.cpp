@@ -21,6 +21,7 @@ bool YaErLiTa::isCollideWithPlayer(Player* player)
 
 	/*获取检测对象的位置*/
 	Point pos = player->getPosition();
+	pos.y = pos.y + 10;   //this is beacuse the pos is left-below point coordinate,it may smaller than entityRect.getMinY()
 
 	//log("playerPos:%f,%f", pos.x, pos.y);
 

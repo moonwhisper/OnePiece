@@ -53,6 +53,12 @@ void WASD_Controller::myupdate(float dt)
 	//pos.x += m_iSpeed;
 	//m_controllerListener->setTagPosition(pos.x, pos.y);
 
+	//avoid press multi keys
+	if (isKeyPressed(EventKeyboard::KeyCode::KEY_UP_ARROW) && (isKeyPressed(EventKeyboard::KeyCode::KEY_LEFT_ARROW) || isKeyPressed(EventKeyboard::KeyCode::KEY_RIGHT_ARROW)))
+	{
+		return;
+	}
+
 
 	if (isKeyPressed(EventKeyboard::KeyCode::KEY_LEFT_ARROW))
 	{

@@ -1,8 +1,9 @@
 #include "Player.h"
+#include "FlowWord.h"
 
 Player::Player()
 {
-
+	m_iHP = 100;
 }
 
 Player::~Player()
@@ -28,6 +29,8 @@ bool Player::init()
 void Player::playerUpdate(float dt)
 {
 	//log("player update time reached----%f",dt);
+
+
 	
 	if (0 == m_battleSerial && false == isBattle && 0 ==m_jumpType &&false == isJump)
 	{
@@ -98,3 +101,29 @@ void Player::actJump(int jumpType)
 {
 	;
 }
+
+void Player::hitedByWeapon()
+{
+	if (NULL == getSprite())
+	{
+		return;
+	}
+
+	m_iHP -= 10;
+
+	if (m_iHP < 0)
+	{
+		m_iHP = 0;
+	}
+
+	/*the hp decrease effects*/
+	FlowWord* flowWord = FlowWord::create();
+	flowWord->showWord("-10", getSprite()->getPosition());
+	this->addChild(flowWord);
+
+}
+
+int Player::getiHp()
+{
+	return this->m_iHP;
+} 

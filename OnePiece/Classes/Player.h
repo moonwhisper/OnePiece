@@ -22,6 +22,13 @@ public:
 
 	void actJump(int jumpType);
 
+	void hitedByWeapon();
+
+	int getiHp();
+
+private:
+	int m_iHP;
+
 };
 
 
